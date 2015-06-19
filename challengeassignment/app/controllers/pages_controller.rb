@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   
   def index
    # @page=Page.all
-   @page = Page.joindata
+   @page = Page.visible
   end
 
   def show
