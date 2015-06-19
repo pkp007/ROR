@@ -1,0 +1,16 @@
+<h1>Subjects#new</h1>
+
+
+
+	
+end
+<%= link_to("Go Back To Index",{:action => "index"}) %>
+
+
+<%= form_for(:subject, :url => {:action => "create"}) do |f| %>
+
+<%= render(partial: "partial_Form" , locals: {:f => f }) %>
+
+<%= submit_tag ("Create Subject")%>
+
+<%end%>

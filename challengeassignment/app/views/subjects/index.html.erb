@@ -1,0 +1,29 @@
+
+<!-- displays notifications-->
+
+<h1>Subjects#index</h1>
+<%= link_to("Create New" ,{:action => "new"}) %>
+
+<table style="border=2px;">
+	
+	<tr>
+		<td>Name</td>
+		<td>Position</td>
+		<td>Visible</td>
+		<td>Updated On</td>
+	</tr>
+	<% @subject.each do |subject|  %>
+	<tr>
+		<td><%= subject.name %></td>
+		<td><%= subject.position %></td>
+		<td><%= subject.visible %></td>
+		<td><%= subject.updated_at %></td>
+		<td>
+		<%= link_to("Show" , {:action =>"show", :id => subject.id }) %>
+		<%= link_to("Edit" , {:action =>"edit", :id => subject.id }) %>
+		<%= link_to("Delete" , {:action =>"delete", :id => subject.id }) %>
+		</td>
+	</tr>
+	<%end%>
+	</table>
+

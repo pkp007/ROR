@@ -1,0 +1,7 @@
+<h1>Subjects#delete</h1>
+
+<%= form_for(:subject , url:{action: "destroy", id: @subject.id}) do |f| %>
+<p> Are you sure , you want to delete the subject? </p>
+<p><%= @subject.name %>
+<%= submit_tag("Delete Subject") %>
+<%end%>

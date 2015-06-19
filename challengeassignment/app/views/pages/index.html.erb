@@ -1,0 +1,22 @@
+<h1>Pages#index</h1>
+
+<%= link_to("Create new page", :action => "new")%>
+<table>
+	<th><h2>Pages</h2></th>
+	<tr>
+	<td><strong>Name</strong></td>
+	<td><strong>Subject</strong></td>
+	<td><strong>Permalink</strong></td>
+	<td><strong>Position</strong></td>
+	<td><strong>Visible</strong></td>
+	</tr>
+	<% @page.each do |page| %>
+	<tr>
+	<td><%= page.name %></td>
+	<td> <%=link_to("#{page.subject_id}"  , {:controller => "subjects" , :action => "show" , :id => page.subject_id}) %></td>	
+	<td><%= page.permalink %></td>
+	<td><%= page.position %></td>
+	<td><%= page.visible %></td>
+	</tr>
+	<% end %>
+</table>

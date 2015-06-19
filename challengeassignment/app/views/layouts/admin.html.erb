@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple CMS</title>
+ 
+ </head>
+<body>
+<div id="Header">
+<h1>Simple CMS Admin</h1>
+<% if !flash[:notice].blank? %>
+<div>
+<%= flash[:notice] %>
+</div>
+<%end%>
+</div>
+<div id="main">
+<div id="content">
+<!-- Yield Starts -->
+<%= yield %>
+<!-- Yield Ends -->
+</div>
+</div>
+<div id="footer">
+<p id="copyright"> &Copy; Prakash Kumar Pradhan 2015
+	
+</p>
+</div>
+</body>
+</html>
